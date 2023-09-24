@@ -1,0 +1,136 @@
+/* color variables */
+:root {
+  --peach: #ee8b8b;
+  --dusty-rose: #ce9898;
+  --grey-red: #423a3a;
+  --error-red: #F96464;
+  --start: #f8bfbf;
+  --end: #ee8b8b;
+  --peach-gradient: linear-gradient(145deg, (var(--start)), (var(--end)));
+
+  --start-light: #f8bfbf59;
+  --end-light: #ee8b8b22;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+z *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Josefin Sans;
+  background: linear-gradient(45deg, var(--start-light), var(--end-light));
+}
+
+.hero-image-desktop {
+  float: right;
+}
+
+.hero-image-mobile {
+  display: none;
+}
+
+section {
+  width: 60vw;
+  height: 100vh;
+  padding: 5% 15%;
+}
+
+.logo {
+  height: 150px;
+}
+
+.title {
+  color: black;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+.title span {
+  color: var(--dusty-rose);
+  font-weight: 300;
+}
+
+.copy {
+  font-size: 16px;
+  color: var(--dusty-rose);
+  line-height: 2;
+  font-weight: 300;
+  margin: 30px 0px;
+}
+
+form {
+  height: 50px;
+}
+
+input {
+  border: solid var(--dusty-rose);
+  border-radius: 30px;
+  height: 100%;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 15px
+}
+
+input::placeholder {
+  color: var(--dusty-rose);
+  padding: 5px 15px;
+  font-family: Josefin Sans;
+}
+
+input:active{
+    border: solid var(--dusty-rose);
+}
+.error-message {
+  color: var(--error-red);
+  padding: 15px;
+  display: none;
+}
+.error{
+    border: solid var(--error-red);
+}
+
+button {
+  height: 100%;
+  display: inline;
+  background: linear-gradient(45deg, var(--start), var(--end));
+  border-radius: 30px;
+  border: none;
+  padding: 10px 35px;
+  margin-left: -50px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+button:hover {
+  cursor: pointer;
+  background: #f8bfbf;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+button::after {
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+/* button interaction realistic click feel */
+button:active,
+button:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+}
+/* RESPONSIVENESS */
+
+/* Mobile */
+@media (max-width: 600px) {
+  section {
+    width: 100vw;
+  }
+  .hero-image-mobile {
+    display: block;
+  }
+}
