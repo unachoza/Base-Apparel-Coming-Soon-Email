@@ -56,19 +56,21 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </div>
-        <form>
+        <form action="#" novalidate>
           <input
-            type="text"
+            type="email"
             name="email"
             id="email"
             value=""
             placeholder="Email Address"
+            required
+            autocomplete="email"
           />
           <button id="submit-button"  type="submit" >
             <img src="./images/icon-arrow.svg" alt="arrow" />
           </button>
-          <div class="error-message">Please proivide a valid email</div>
         </form>
+        <div class="error-message"></div>
       </section>
     </main>
     <script src="./script.js"></script>
