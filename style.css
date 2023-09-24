@@ -3,7 +3,8 @@
   --peach: #ee8b8b;
   --dusty-rose: #ce9898;
   --grey-red: #423a3a;
-  --error-red: #F96464;
+  --error-red: #f96464;
+  --thank-you-green: #70c583;
   --start: #f8bfbf;
   --end: #ee8b8b;
   --peach-gradient: linear-gradient(145deg, (var(--start)), (var(--end)));
@@ -74,7 +75,7 @@ input {
   height: 100%;
   width: 90%;
   margin-bottom: 10px;
-  padding: 15px
+  padding: 15px;
 }
 
 input::placeholder {
@@ -83,16 +84,22 @@ input::placeholder {
   font-family: Josefin Sans;
 }
 
-input:active{
-    border: solid var(--dusty-rose);
+input:active {
+  border: solid var(--dusty-rose);
 }
 .error-message {
   color: var(--error-red);
   padding: 15px;
   display: none;
 }
-.error{
-    border: solid var(--error-red);
+.error {
+  border: solid var(--error-red);
+}
+.thank-you-message {
+  color: var(--thank-you-green);
+  font-weight: 300;
+  font-size: 18px;
+  display: none;
 }
 
 button {
