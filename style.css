@@ -49,6 +49,7 @@ section {
   color: black;
   font-size: 60px;
   text-transform: uppercase;
+  letter-spacing: 15px;
 }
 
 .title span {
@@ -87,14 +88,21 @@ input::placeholder {
 input:active {
   border: solid var(--dusty-rose);
 }
+
+.user-feedback {
+  margin-top: 10px;
+}
+
 .error-message {
   color: var(--error-red);
   padding: 15px;
   display: none;
 }
+
 .error {
   border: solid var(--error-red);
 }
+
 .thank-you-message {
   color: var(--thank-you-green);
   font-weight: 400;
@@ -112,6 +120,7 @@ button {
   margin-left: -50px;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
   cursor: pointer;
   background: #f8bfbf;
