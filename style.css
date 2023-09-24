@@ -20,14 +20,27 @@ z *::after {
   margin: 0;
   padding: 0;
 }
-
-body {
-  font-family: Josefin Sans;
-  background: linear-gradient(45deg, var(--start-light), var(--end-light));
+html {
+  overflow-x: hidden;
 }
-
+body {
+  height: 100vh;
+  font-family: Josefin Sans;
+  /* background: linear-gradient(45deg, var(--start-light), var(--end-light)),
+    url(images/bg-pattern-desktop.svg); */
+  background: url(images/bg-pattern-desktop.svg);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+}
+main {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100vw;
+  position: relative;
+}
 .hero-image-desktop {
-  float: right;
+  margin-top: -28.3vh;
+  width: 100%;
 }
 
 .hero-image-mobile {
@@ -35,19 +48,21 @@ body {
 }
 
 section {
-  width: 60vw;
   height: 100vh;
   padding: 5% 15%;
 }
 
 .logo {
-  height: 150px;
+  padding: 5% 15%;
+  width: fit-content;
 }
 
 .title {
   color: black;
   font-size: 60px;
   text-transform: uppercase;
+  letter-spacing: 10px;
+  font-weight: 600;
 }
 
 .title span {
@@ -56,6 +71,7 @@ section {
 }
 
 .copy {
+  width: 105%;
   font-size: 16px;
   color: var(--dusty-rose);
   line-height: 2;
@@ -64,6 +80,7 @@ section {
 }
 
 form {
+  /* border: 2px solid black; */
   height: 50px;
   display: flex;
   position: relative;
@@ -74,28 +91,27 @@ input {
   border: none;
   outline: 2px solid var(--dusty-rose);
   border-radius: 30px;
-  height: 100%;
   width: 92.5%;
+  height: 100%;
   margin-bottom: 10px;
-  padding: 15px;
+  padding: 15px 15px 15px 20px;
   font-family: inherit;
 }
 
 input::placeholder {
   color: var(--dusty-rose);
-  padding: 5px 15px;
   font-family: inherit;
 }
 
 input:active {
   outline: 2px solid var(--dusty-rose);
 }
-.error-image{
- position: relative;
- top: 50%;
- left: -25%;
- transform: translateY(-25%);
- display: none;
+.error-image {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translateY(-50%);
+  display: none;
 }
 .error-message {
   padding: 15px;
@@ -108,6 +124,9 @@ input:active {
 }
 
 button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   position: absolute;
   left: 75%;
@@ -144,10 +163,49 @@ button:focus {
 
 /* Mobile */
 @media (max-width: 600px) {
+  body {
+    background: linear-gradient(45deg, var(--start-light), var(--end-light));
+  }
   section {
-    width: 100vw;
+    width: 100%;
+    padding: 0%;
+    text-align: center;
+    margin-top: 2em;
+  }
+  .error-message{
+    text-align: left;
+    width: 90%;
+    margin: auto;
+  }
+  main {
+    flex-direction: column;
+  }
+  .copy {
+    margin: 2em auto;
+    width: 95%;
+    font-weight: 600;
+    line-height: 1.5;
   }
   .hero-image-mobile {
     display: block;
+    width: 100%;
+  }
+  .hero-image-desktop {
+    display: none;
+  }
+  form {
+    width: 90%;
+    margin: auto;
+  }
+  input {
+    width: 100%;
+  }
+  .error-image {
+    left: 75%;
+  }
+  button {
+    left: 100%;
+    padding: 20px;
+    transform: translateX(-100%);
   }
 }
