@@ -16,7 +16,7 @@ const validateForm = (e) => {
     !inputValue.includes("@") ?
         containsError = true : containsError = false
     if (containsError) {
-        errorMessage.style.display = "inline";
+        errorMessage.style.display = "inline"; ""
         inputEmail.classList.add("error")
     } else {
         errorMessage.style.display = "none";

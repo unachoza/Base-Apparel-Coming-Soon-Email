@@ -97,7 +97,7 @@ input:active {
 }
 .thank-you-message {
   color: var(--thank-you-green);
-  font-weight: 300;
+  font-weight: 400;
   font-size: 18px;
   display: none;
 }
