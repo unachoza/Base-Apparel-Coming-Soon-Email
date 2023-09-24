@@ -63,6 +63,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 10px;
   font-weight: 600;
+
 }
 
 .title span {
@@ -80,11 +81,11 @@ section {
 }
 
 form {
-  /* border: 2px solid black; */
   height: 50px;
   display: flex;
   position: relative;
   /* to align the button with the input element   */
+
 }
 
 input {
@@ -113,6 +114,11 @@ input:active {
   transform: translateY(-50%);
   display: none;
 }
+
+.user-feedback {
+  margin-top: 10px;
+}
+
 .error-message {
   padding: 15px;
 }
@@ -121,7 +127,7 @@ input:active {
 }
 .success {
   outline: 2px solid rgb(20, 209, 20);
-}
+
 
 button {
   display: flex;
@@ -140,6 +146,7 @@ button {
   /* margin-left: -50px; */
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
+
 button:hover {
   cursor: pointer;
   background: #f8bfbf;
