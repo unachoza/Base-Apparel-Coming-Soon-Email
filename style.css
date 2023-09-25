@@ -15,14 +15,16 @@
 /* Box sizing rules */
 *,
 *::before,
-z *::after {
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 html {
   overflow-x: hidden;
 }
+
 body {
   height: 100vh;
   font-family: Josefin Sans;
@@ -32,12 +34,14 @@ body {
   background-size: 100vw;
   background-repeat: no-repeat;
 }
+
 main {
   display: flex;
   flex-direction: row-reverse;
   width: 100vw;
   position: relative;
 }
+
 .hero-image-desktop {
   margin-top: -28.3vh;
   width: 100%;
@@ -107,6 +111,7 @@ input::placeholder {
 input:active {
   outline: 2px solid var(--dusty-rose);
 }
+
 .error-image {
   position: absolute;
   top: 50%;
@@ -122,97 +127,111 @@ input:active {
 .error-message {
   padding: 15px;
 }
+
 .error {
   outline: 2px solid var(--error-red);
 }
+
 .success {
   outline: 2px solid rgb(20, 209, 20);
 
 
-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  position: absolute;
-  left: 75%;
-  /* this was done to perfectly align the button over the input tag */
-
-  /* display: inline; */
-  background: linear-gradient(45deg, var(--start), var(--end));
-  border-radius: 30px;
-  border: none;
-  padding: 10px 35px;
-  /* margin-left: -50px; */
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-button:hover {
-  cursor: pointer;
-  background: #f8bfbf;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-button::after {
-  opacity: 0;
-  transition: all 0.2s;
-}
-
-/* button interaction realistic click feel */
-button:active,
-button:focus {
-  outline: none;
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: all 0.2s;
-}
-/* RESPONSIVENESS */
-
-/* Mobile */
-@media (max-width: 600px) {
-  body {
-    background: linear-gradient(45deg, var(--start-light), var(--end-light));
-  }
-  section {
-    width: 100%;
-    padding: 0%;
-    text-align: center;
-    margin-top: 2em;
-  }
-  .error-message{
-    text-align: left;
-    width: 90%;
-    margin: auto;
-  }
-  main {
-    flex-direction: column;
-  }
-  .copy {
-    margin: 2em auto;
-    width: 95%;
-    font-weight: 600;
-    line-height: 1.5;
-  }
-  .hero-image-mobile {
-    display: block;
-    width: 100%;
-  }
-  .hero-image-desktop {
-    display: none;
-  }
-  form {
-    width: 90%;
-    margin: auto;
-  }
-  input {
-    width: 100%;
-  }
-  .error-image {
-    left: 75%;
-  }
   button {
-    left: 100%;
-    padding: 20px;
-    transform: translateX(-100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: absolute;
+    left: 75%;
+    /* this was done to perfectly align the button over the input tag */
+
+    /* display: inline; */
+    background: linear-gradient(45deg, var(--start), var(--end));
+    border-radius: 30px;
+    border: none;
+    padding: 10px 35px;
+    /* margin-left: -50px; */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: #f8bfbf;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  }
+
+  button::after {
+    opacity: 0;
+    transition: all 0.2s;
+  }
+
+  /* button interaction realistic click feel */
+  button:active,
+  button:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.2s;
+  }
+
+  /* RESPONSIVENESS */
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    body {
+      background: linear-gradient(45deg, var(--start-light), var(--end-light));
+    }
+
+    section {
+      width: 100%;
+      padding: 0%;
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    .error-message {
+      text-align: left;
+      width: 90%;
+      margin: auto;
+    }
+
+    main {
+      flex-direction: column;
+    }
+
+    .copy {
+      margin: 2em auto;
+      width: 95%;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .hero-image-mobile {
+      display: block;
+      width: 100%;
+    }
+
+    .hero-image-desktop {
+      display: none;
+    }
+
+    form {
+      width: 90%;
+      margin: auto;
+    }
+
+    input {
+      width: 100%;
+    }
+
+    .error-image {
+      left: 75%;
+    }
+
+    button {
+      left: 100%;
+      padding: 20px;
+      transform: translateX(-100%);
+    }
   }
 }
