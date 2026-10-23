@@ -117,6 +117,27 @@ input:active {
   border: solid var(--dusty-rose);
 }
 
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  text-align: left;
+  font-size: 14px;
+  color: var(--dusty-rose);
+  font-weight: 300;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 3px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--peach);
+}
+
 .user-feedback {
   margin-top: 10px;
 }
@@ -134,7 +155,7 @@ input:active {
 .thank-you-message {
   /* color: var(--thank-you-green); */
   color: var(--grey-red);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 18px;
   display: none;
 }
