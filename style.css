@@ -162,13 +162,14 @@ input[type="checkbox"] {
 
 button {
   height: 100%;
-      z-index: 100;
+  z-index: 100;
   display: inline;
   background: linear-gradient(45deg, var(--start), var(--end));
   border-radius: 30px;
   border: none;
   padding: 10px 35px;
   margin-left: -50px;
+  color: white;
   /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */
 }
 
