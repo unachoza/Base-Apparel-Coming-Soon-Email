@@ -129,13 +129,31 @@ label {
 }
 
 input[type="checkbox"] {
+  appearance: none;
   width: 18px;
   height: 18px;
   min-width: 18px;
+  border: 2px solid var(--dusty-rose);
   border-radius: 3px;
   margin: 0;
   cursor: pointer;
-  accent-color: var(--peach);
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--peach);
+  border-color: var(--peach);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .user-feedback {
