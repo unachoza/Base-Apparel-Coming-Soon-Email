@@ -68,6 +68,19 @@ section {
 form {
   display: flex;
   height: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-animate {
+  width: 80px;
+  animation: formSlideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both,
+             formExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.0s both;
+}
+
+.form-animate input {
+  opacity: 0;
+  animation: inputReveal  ease 1.4s both;
 }
 
 input {
@@ -112,13 +125,14 @@ input:active {
 
 button {
   height: 100%;
+      z-index: 100;
   display: inline;
   background: linear-gradient(45deg, var(--start), var(--end));
   border-radius: 30px;
   border: none;
   padding: 10px 35px;
   margin-left: -50px;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); */
 }
 
 button:hover {
@@ -137,9 +151,83 @@ button:active,
 button:focus {
   outline: none;
   transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); */
   transition: all 0.2s;
 }
+
+/* Slide-in animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.logo {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.title {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s both;
+}
+
+.copy {
+  animation: slideInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s both;
+}
+
+@keyframes formSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes formExpand {
+  from {
+    width: 80px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes inputReveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-image-desktop {
+  animation: fadeIn 1.2s ease 0.3s both;
+}
+
 /* RESPONSIVENESS */
 
 /* Mobile */
